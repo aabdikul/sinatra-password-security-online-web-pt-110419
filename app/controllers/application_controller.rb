@@ -41,7 +41,6 @@ class ApplicationController < Sinatra::Base
 end
 
 	get "/success" do
-		@user = User.find_by(:username => params[:username])
 		if logged_in?
 			erb :success
 		else
